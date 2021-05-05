@@ -5,12 +5,12 @@
 
 "things to do" "(due date)"  
 
-Ex:
+Ex:  
 write some code (1215)  
 play with friends (1216)  
 go shopping (1211)  
 
-Excepted output:
+Excepted output:  
 1211 go shopping  
 1215 write some code  
 1216 play with friends  
