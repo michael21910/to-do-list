@@ -1,7 +1,7 @@
 # to-do-list  
 
-## Reads the file name "to do list.txt", then the program will sort it.
-### The format of the txt file are as follows:
+### Reads the file name "to do list.txt", then the program will sort it.
+### The format of the txt file are as follows:  
 
 "things to do" "(due date)"  
 
