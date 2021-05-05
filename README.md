@@ -19,4 +19,6 @@ Excepted output:
 Analysis:  
 time complexity: O(n^2)  
 space complexity: O(n)  
-While n represents the size of the to dos.
+While n represents the size of the to dos.  
+  
+###### finish date: 05/05/2021
