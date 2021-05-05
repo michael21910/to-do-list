@@ -1,6 +1,6 @@
 # to-do-list  
   
-###### A small small project
+##### A small small project
 ##### Reads the file name "to do list.txt", then the program will sort it by date.  
 ##### The format of the .txt file are as follows:  
 
