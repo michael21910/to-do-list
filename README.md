@@ -1,6 +1,6 @@
 # to-do-list  
 
-### Reads the file name "to do list.txt", then the program will sort it *by date*.  
+### Reads the file name "to do list.txt", then the program will sort it **by date**.  
 ### The format of the txt file are as follows:  
 
 "things to do" "(due date)"  
