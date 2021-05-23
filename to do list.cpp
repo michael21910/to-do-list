@@ -2,8 +2,7 @@
 using namespace std;
 
 string str;
-vector<string> things;
-vector<string> date;
+vector<pair<string, string>> datas;
 
 void init()
 {
@@ -17,35 +16,26 @@ void run()
 {
     int index = 0;
     for(int i = 0; i < str.length(); i++){
-        string temp = "";
+        string thing_temp = "", date_temp = "";
         if(str[i] == '\n'){
             index = i + 1;
         }
         if(str[i] == '('){
             for(int j = index; j < i - 1; j++){
-                temp = temp + str[j];
+                thing_temp = thing_temp + str[j];
             }
-            things.push_back(temp);
             index = i;
-            temp = "";
             for(int j = index + 1; j < index + 5; j++){
-                temp = temp + str[j];
+                date_temp = date_temp + str[j];
             }
-            date.push_back(temp);
+            datas.push_back(make_pair(date_temp, thing_temp));
         }
     }
 }
 
 void sorting()
 {
-    for(int i = 0; i < date.size(); i++){
-        for(int j = i + 1; j < date.size(); j++){
-            if(date[i] > date[j]){
-                swap(date[i], date[j]);
-                swap(things[i], things[j]);
-            }
-        }
-    }
+    sort(datas.begin(), datas.end());
 }
 
 string get_date()
@@ -64,12 +54,12 @@ string get_date()
 
 void print()
 {
-    for(int i = 0; i < things.size(); i++){
-        if(date[i] == get_date()){
-            cout << date[i] << " " << things[i] << " ( Due today!!! ) " << endl;
+    for(int i = 0; i < datas.size(); i++){
+        if(datas[i].first == get_date()){
+            cout << datas[i].first << " " << datas[i].second << " ( Due today!!! ) " << endl;
         }
         else{
-            cout << date[i] << " " << things[i] << endl;
+            cout << datas[i].first << " " << datas[i].second << endl;
         }
     }
 }
@@ -83,3 +73,4 @@ int main()
     system("pause");
     return 0;
 }
+
