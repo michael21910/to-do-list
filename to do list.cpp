@@ -1,8 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <cstring>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 string str;
@@ -52,10 +48,29 @@ void sorting()
     }
 }
 
+string get_date()
+{
+    time_t t = time(0);
+    tm* now = localtime(&t);
+    string month = to_string(now -> tm_mon + 1), day = to_string(now -> tm_mday);
+    if(month.length() == 1){
+        month = "0" + month;
+    }
+    if(day.length() == 1){
+        day = "0" + day;
+    }
+    return month + day;
+}
+
 void print()
 {
     for(int i = 0; i < things.size(); i++){
-        cout << date[i] << " " << things[i] << endl;
+        if(date[i] == get_date()){
+            cout << date[i] << " " << things[i] << " ( Due today!!! ) " << endl;
+        }
+        else{
+            cout << date[i] << " " << things[i] << endl;
+        }
     }
 }
 
@@ -65,5 +80,6 @@ int main()
     run();
     sorting();
     print();
+    system("pause");
     return 0;
 }
