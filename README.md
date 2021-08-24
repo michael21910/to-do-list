@@ -1,4 +1,4 @@
-# to-do-list  
+# To Do List
   
 ##### A small small project  
 ##### Reads the file name "to do list.txt", then the program will sort it by date.  
