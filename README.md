@@ -22,6 +22,6 @@ Analysis:
 time complexity: O(nlogn)  
 space complexity: O(n)  
 While n represents the size of the to dos.  
-  
-###### update: 05/23/2021  
-  
+
+## License
+[MIT](LICENSE) © Tsuen Hsueh
